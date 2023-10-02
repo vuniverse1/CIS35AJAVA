@@ -1,0 +1,223 @@
+﻿Jason Vu Java Programming 35A Lab 5 
+Design
+Variables
+(int) we need variables to the student’s SID and scores
+static (int) variable to track the number the student counter
+int[] variables to store quiz scores
+Input
+Read the text file by calling Util class
+        lab2 = Util.readFile("/Users/jasonvu/Downloads/students.txt", lab2);
+
+
+Processing
+Util class:
+Tokenize buffer, skip the first line by using a loop
+(if counter >0)
+Statistics class:
+For find low/high:
+        Set an initial value - int initialVal = 100;
+        Then loop through a for loop, if initialVal > lowscores[i], then set it to new value,
+For average, loop through and add sums, then divide by student count
+for(int j=1; j<counter; j++){
+                        int[] scores= a[j].getScores();
+                        sum= sum + scores[i];
+                                                        }
+                avgscores[i]= sum/counter;
+
+
+
+
+Printing
+        Create a print method , Use a switch case to print the user’s desired information they want to see, case 1 = lowest quiz scores, case 2 = highest scores, case 3 = average, case 4 is all info
+        switch(option) {
+                case 1:
+                System.out.printf("Lowest Scores: %d  %d  %d  %d  %d ", lowscores[0], lowscores[1], lowscores[2], lowscores[3], lowscores[4]);
+                break;
+                case 2: System.out.printf("Highest Scores: %d  %d  %d  %d  %d ", highscores[0], highscores[1], highscores[2], highscores[3], highscores[4]);
+                break;
+                case 3:  System.out.printf("Average Scores: %d  %d  %d  %d  %d ", avgscores[0], avgscores[1], avgscores[2], avgscores[3], avgscores[4]);
+                break;
+                
+
+
+
+
+
+
+Test Case Outputs
+1. empty file with header
+There are no student scores.
+SID   Q1  Q2  Q3  Q4  Q5
+
+
+Enter 1 to see lowest scores. 
+Enter 2 to see highest scores 
+Enter 3 to see average scores. 
+Enter 4 to see all information. 4
+
+
+Lowest Scores: 0  0  0  0  0 
+Highest Scores: 0  0  0  0  0 
+Average Scores: NaN  NaN  NaN  NaN  NaN 
+
+
+
+
+2. 1 record with header
+SID   Q1  Q2  Q3  Q4  Q5
+7874   60  100  56  78  78 
+
+
+Enter 1 to see lowest scores. 
+Enter 2 to see highest scores 
+Enter 3 to see average scores. 
+Enter 4 to see all information. 4
+
+
+Lowest Scores: 0  0  0  0  0 
+Highest Scores: 60  100  56  78  78 
+Average Scores: 30.00  50.00  28.00  39.00  39.00 
+
+
+3. 15 records with header
+SID   Q1  Q2  Q3  Q4  Q5
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+1947   45  40  88  78  55 
+2877   55  50  99  78  80 
+3189   22  70  100  78  77 
+4602   89  50  91  78  60 
+5405   11  11  0  78  10 
+6999   0  98  89  78  20 
+
+
+Enter 1 to see lowest scores. 
+Enter 2 to see highest scores 
+Enter 3 to see average scores. 
+Enter 4 to see all information. 4
+
+
+Lowest Scores: 0  7  0  32  10 
+Highest Scores: 100  100  100  90  80 
+Average Scores: 43.31  39.69  66.06  70.94  46.63 
+
+
+4. 40 records with header 
+SID   Q1  Q2  Q3  Q4  Q5
+0   0  0  0  0  0 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+1947   45  40  88  78  55 
+2877   55  50  99  78  80 
+3189   22  70  100  78  77 
+4602   89  50  91  78  60 
+5405   11  11  0  78  10 
+6999   0  98  89  78  20 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+1947   45  40  88  78  55 
+2877   55  50  99  78  80 
+3189   22  70  100  78  77 
+4602   89  50  91  78  60 
+5405   11  11  0  78  10 
+6999   0  98  89  78  20 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+
+
+Enter 1 to see lowest scores. 
+Enter 2 to see highest scores 
+Enter 3 to see average scores. 
+Enter 4 to see all information. 4
+
+
+Lowest Scores: 0  0  0  0  0 
+Highest Scores: 100  100  100  90  80 
+Average Scores: 46.42  39.65  67.60  73.43  48.40 
+
+
+5. 42 records with header - ignore the last two rows
+(same output as 40 records)
+Only able to calculate up to 40 scores, anything after is ignored.
+
+
+SID   Q1  Q2  Q3  Q4  Q5
+0   0  0  0  0  0 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+1947   45  40  88  78  55 
+2877   55  50  99  78  80 
+3189   22  70  100  78  77 
+4602   89  50  91  78  60 
+5405   11  11  0  78  10 
+6999   0  98  89  78  20 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+1947   45  40  88  78  55 
+2877   55  50  99  78  80 
+3189   22  70  100  78  77 
+4602   89  50  91  78  60 
+5405   11  11  0  78  10 
+6999   0  98  89  78  20 
+1234   52  7  100  78  34 
+2134   90  36  90  77  30 
+3124   100  45  20  90  70 
+4532   11  17  81  32  77 
+5678   20  12  45  78  34 
+6134   34  80  55  78  45 
+7874   60  100  56  78  78 
+8026   70  10  66  78  56 
+9893   34  9  77  78  20 
+
+
+Enter 1 to see lowest scores. 
+Enter 2 to see highest scores 
+Enter 3 to see average scores. 
+Enter 4 to see all information. 4
+
+
+Lowest Scores: 0  0  0  0  0 
+Highest Scores: 100  100  100  90  80 
+Average Scores: 46.42  39.65  67.60  73.43  48.40

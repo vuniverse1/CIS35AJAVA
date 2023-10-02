@@ -1,0 +1,97 @@
+﻿Jason Vu Java Programming 35A Exercise 2 
+Design
+Variables
+(String) variables to track name and dates of departure and arrival, in child classes, cargo type, loading type, cruise type
+(double) track ticket price variable in child class
+(int) variables to track year, capacity, length, width, height
+Input
+        Hardcode values using methods or in constructor
+                ships[0].setHeight(100);
+ships[1] = new Ship("La Vida", 1976, 1000, 500, 500, 50,"03 - 04 - 2022", "03 - 05 - 2022");
+
+
+
+
+Processing
+Calculate the surface area of ship
+Length times width
+Override method in cruise ship bc there are multiple floors
+        Length times width times numOfFloors
+
+
+Printing
+        Print the ships in array using for loop
+for(int i = 0; i < ships.length; i++) {
+                        System.out.printf("\n");
+                        ships[i].print(); }
+
+
+
+
+Test Output
+hardcode values 
+
+
+Name: The Greatest 
+Year Built: 2000 
+Capacity: 825 
+Length: 300ft. 
+Width 400ft. 
+Height 45ft. 
+Surface Area: 360000sq. ft. 
+Departure Date: December 5th 
+Arrival Date: December 8th
+Ticket Price: $2199.99 
+Number of Floors: 3 
+Cruise Type: Luxury Cruise
+
+
+Name: La Vida 
+Year Built: 1976 
+Capacity: 1000 
+Length: 500ft. 
+Width 500ft. 
+Height 50ft. 
+Surface Area: 250000sq. ft. 
+Departure Date: 03 - 04 - 2022 
+Arrival Date: 03 - 05 - 2022
+
+
+Name: Golden Cargo 
+Year Built: 1944 
+Capacity: 200 
+Length: 250ft. 
+Width 240ft. 
+Height 40ft. 
+Surface Area: 60000sq. ft. 
+Departure Date: April 4th, 2022 
+Arrival Date: April 7th, 2022
+Loading Type: Bulk 
+Cargo Type: Food
+
+
+Name: Heavenly Cruise 
+Year Built: 2018 
+Capacity: 3000 
+Length: 1000ft. 
+Width 213ft. 
+Height 300ft. 
+Surface Area: 1278000sq. ft. 
+Departure Date: 08-23-2022 
+Arrival Date: 08-26,2022
+Ticket Price: $4675.49 
+Number of Floors: 6 
+Cruise Type: Celebrity Eclipse
+
+
+Name: China Trade 
+Year Built: 1999 
+Capacity: 250 
+Length: 200ft. 
+Width 365ft. 
+Height 233ft. 
+Surface Area: 73000sq. ft. 
+Departure Date: September 10th, 2022 
+Arrival Date: Septempber 17th, 2022
+Loading Type: Bulk 
+Cargo Type: Retail Items

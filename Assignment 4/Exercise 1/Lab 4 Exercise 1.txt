@@ -1,0 +1,116 @@
+﻿Jason Vu Java Programming 35A Exercise 1 
+PART 1
+Design
+Variables
+(double) we need variables to track savingBalance
+static (double) variable to track the annualInterestRate, static so it is available for all objects and class
+Input
+        Hardcode values using method
+                saver1.setSavingsBalance(2000);
+                saver2.setSavingsBalance(3000);
+                SavingsAccount.modifyInterestRate(.04);
+
+
+
+
+Processing
+Calculate the monthly interest
+savingsBalance += savingsBalance * (annualInterestRate/12);
+Calculate the deposit and withdrawal
+        savingsBalance (+)(-)= savingsAmount;
+
+
+Printing
+        Print the balances, call method
+System.out.printf("\nYour new balance is $%.2f", saver1.getSavingsBalance());
+
+
+
+
+
+
+Test Output
+Testing for 4% interest rate
+
+
+Your new balance is $2006.67
+Your new balance is $3010.00
+-----------------------------------------------
+Testing for 5% interest rate
+
+
+Your new balance is $2015.03
+Your new balance is $3022.54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PART 2
+Design
+Variables
+        VARIABLES ARE INHERITED FROM PARENT CLASS - use super() in constructor
+(double) we need variables to track savingBalance
+static (double) variable to track the annualInterestRate, static so it is available for all objects and class
+Input
+        Hardcode values using methods
+                saver1.setSavingsBalance(2000.00);
+                saver2.deposit(800);
+                saver1.withdraw(500);
+
+
+
+
+Processing
+* Inherit parent class methods
+* Overrride method for calculating monthly interest
+if(getSavingsBalance() > 10000) {  //if return savings balance exceeds 10k
+                modifyInterestRate(.1); //interest rate is 10%
+        }
+        else {
+                modifyInterestRate(0.04); //else interest rate stays at 4%
+                }
+        super.calcMonthlyInterest(); //then calculate the monthly interest rate
+}
+
+
+
+
+Printing
+        Print the balances, call method
+System.out.printf("\nYour new balance is $%.2f", saver1.getSavingsBalance());
+
+
+
+
+
+
+Test Output
+saver1 initial balance = $3000, deposit $12000 and $100, withdraw $9750
+Saver2 initial balance = $2000, deposit $500 and withdraw $180
+After deposit
+Your new saver1 balance is $15225.83
+Your new saver 2 balance is $2508.33
+After withdrawal
+Your new saver1 balance is $5475.83
+Your new saver2 balance is $2328.33
+
+
+
+
+
+
+
+
+}

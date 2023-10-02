@@ -1,0 +1,73 @@
+﻿Jason Vu 35a
+Part 1 HumanGenome
+Class Diagram:
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables:
+(string) we need variables to track manual input - genomeName, genes, cells, chromosomes
+Input:
+Manual hardcode input
+new HumanGenome("\"Human Sri\"", "20000", "46", "75");
+
+
+Processing:
+HumanGenome.java class
+Default constructor - HumanGenome(){}
+Overloading constructor - HumanGenome(String genomeName, String genes, String chromosomes, String cells) 
+        {
+                this.genomeName = genomeName;
+                this.genes = genes;
+                this.chromosomes = chromosomes;
+                this.cells = cells;}
+Set and Get Methods - void setGenomeName(), getGenomeName()
+GenomeInput.java class
+main (String arg[]) - create three instances of person object, 
+Hardcode input correlating with constructor in HumanGenome.java
+HumanGenome Sally = new HumanGenome("\"Human Sally\"", "20000", "46", "120");
+Print header:
+System.out.printf("%-15s%-10s%25s%30s", "GenomeName", "NumberofGenes", "NumberofChromosomes", "NumberofCells(Trillions)");
+Print each object calling print()
+Bob.print();
+Sally.print();
+Sri.print();
+Test Runs/Output
+GenomeName     NumberofGenes      NumberofChromosomes      NumberofCells(Trillions)
+"Human Bob"    20000                            46                            76
+"Human Sally"  20000                            46                           120
+"Human Sri"    20000                            46                            75

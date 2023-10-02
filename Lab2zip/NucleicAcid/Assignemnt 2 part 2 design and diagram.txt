@@ -1,0 +1,61 @@
+﻿Part 2 GenoNucleicAcid
+Class Diagram:
+  
+
+
+
+Variables:
+(string) we need variables to track manual string input - name, chemicalForm
+(float) we need variables to track manual float inputs - density, molarMass
+Input:
+Manual hardcode input
+new NucleicAcid("Adenine", "C5H5N5", 135.13f, 1.6f);
+
+
+
+
+Processing:
+HumanGenome.java class
+Default constructor - NucleicAcid(){}
+
+
+
+
+Overloading constructor - NucleicAcid(String name, String chemicalForm, float molarMass, float density) 
+        {                this.name = name;
+                this.chemicalForm =chemicalForm;
+                this.molarMass = molarMass;
+                this.density = density;
+}
+Set and Get Methods - void setName(), getName()
+GenoNucleicAcid.java class
+main (String arg[]) - create three instances of NucleidAcid object, 
+Hardcode input correlating with constructor in HumanGenome.java
+NucleicAcid cytosine = new NucleicAcid("Cytosine", "C4H5N3O", 111.10f, 1.55f);
+Print objects calling print() method:
+uracil.print();
+Test Runs/Output
+Cytosine       
+ Chemical Formula: C4H5N3O
+ Molar Mass: 111.100 g/mol
+ Density: 1.550 g/cm3
+      
+Adenine        
+ Chemical Formula: C5H5N5
+ Molar Mass: 135.130 g/mol
+ Density: 1.600 g/cm3
+      
+Guanine        
+ Chemical Formula: C5H5N5O
+ Molar Mass: 151.130 g/mol
+ Density: 2.200 g/cm3
+      
+Thymine        
+ Chemical Formula: C5H6N2O2
+ Molar Mass: 126.113 g/mol
+ Density: 1.223 g/cm3
+      
+Uracil         
+ Chemical Formula: C4H4N2O2
+ Molar Mass: 112.087 g/mol
+ Density: 1.320 g/cm3
